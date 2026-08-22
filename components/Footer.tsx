@@ -11,7 +11,7 @@ function SocialIcon({
     <a
       href="#"
       aria-label={label}
-      className="flex h-10 w-10 items-center justify-center rounded-full border border-[#d8c9bf] bg-white text-[#1d1a19] transition hover:border-[#bca99e] hover:text-[#000000]"
+      className="flex h-10 w-10 items-center justify-center rounded-full border border-[#FB6F92] bg-white text-[#1d1a19] transition hover:border-[#FB6F92] hover:text-[#000000]"
     >
       {children}
     </a>
@@ -20,10 +20,10 @@ function SocialIcon({
 
 export function Footer() {
   return (
-    <footer className="border-t border-[#e9dfd6] bg-[#f8f3ee] text-[#3e3532]">
+    <footer className="border-t border-[#FB6F92] bg-[#FB6F92] text-[#ffffff]">
       <div className="mx-auto grid max-w-7xl gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[1.2fr_0.8fr_0.9fr_1.2fr] lg:px-8">
         <div className="space-y-5">
-          <p className="text-2xl font-semibold tracking-[0.38em] text-[#1d1a19]">
+          <p className="text-2xl font-semibold tracking-[0.44em] text-[#ffffff]">
             WARD
           </p>
 
@@ -61,10 +61,10 @@ export function Footer() {
         </div>
 
         <div className="space-y-4">
-          <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-[#1d1a19]">
+          <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-[#ffffff]">
             About
           </h3>
-          <ul className="space-y-3 text-sm text-[#584d49]">
+          <ul className="space-y-3 text-sm text-[#ffffff]">
             <li>
               <Link href="/about" className="transition hover:text-[#1d1a19]">
                 About
@@ -79,10 +79,10 @@ export function Footer() {
         </div>
 
         <div className="space-y-4">
-          <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-[#1d1a19]">
+          <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-[#ffffff]">
             Terms &amp; Conditions
           </h3>
-          <ul className="space-y-3 text-sm text-[#584d49]">
+          <ul className="space-y-3 text-sm text-[#ffffff]">
             <li>
               <Link href="/terms" className="transition hover:text-[#1d1a19]">
                 Terms &amp; Conditions
@@ -102,10 +102,10 @@ export function Footer() {
         </div>
 
         <div className="space-y-4">
-          <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-[#1d1a19]">
+          <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-[#ffffff]">
             Newsletter
           </h3>
-          <p className="text-xl font-medium text-[#1d1a19] sm:text-2xl">
+          <p className="text-xl font-medium text-[#ffffff] sm:text-2xl">
             Hey beautiful, let&apos;s connect
           </p>
 
@@ -132,7 +132,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-[#e3d8ce]">
-        <div className="mx-auto max-w-7xl px-4 py-5 text-center text-[11px] uppercase tracking-[0.18em] text-[#584d49] sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-4 py-5 text-center text-[11px] uppercase tracking-[0.18em] text-[#ffffff] sm:px-6 lg:px-8">
           <p>© 2026 WARD Beauty, All Rights Reserved.</p>
         </div>
       </div>
