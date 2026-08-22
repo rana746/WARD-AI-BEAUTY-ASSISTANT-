@@ -1,3 +1,15 @@
+## WARD AI
+
+WARD AI is a streaming AI beauty assistant built for the WARD beauty brand.
+
+It supports real-time streamed responses, multiple conversation turns,
+interruptible generation, Arabic and English conversations, and
+responsive mobile-friendly chat.
+
+### AI Assistant Preview
+
+<img src="./public/ward-ai.png" alt="WARD AI Assistant" width="800" />
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
