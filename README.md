@@ -9,8 +9,6 @@ and responsive mobile-friendly chat.
 
 ### AI Assistant Preview
 
-[![WARD AI Assistant](./public/WARD AI.png)](https://ward-ai-beauty.vercel.app/)
-
 **[Try WARD AI →](https://ward-ai-beauty.vercel.app/)**
 
 
