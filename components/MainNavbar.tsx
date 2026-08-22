@@ -22,7 +22,7 @@ function IconButton({
     <button
       type="button"
       aria-label={label}
-      className="flex h-9 w-9 items-center justify-center rounded-full text-[#1f1a18] transition hover:text-[#000000] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1f1a18]/40"
+      className="flex h-9 w-9 items-center justify-center rounded-full text-[#ffffff] transition hover:text-[#000000] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1f1a18]/40"
     >
       {children}
     </button>
@@ -44,7 +44,7 @@ export function MainNavbar() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[#efe5dd] bg-[#f9f5f2]/95 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-[#FB6F92] bg-[#FB6F92]/95 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:px-8">
         {isTopOfPage ? (
           <div className="w-10 shrink-0" aria-hidden="true" />
@@ -52,7 +52,7 @@ export function MainNavbar() {
           <Link
             href="/"
             aria-label="WARD home"
-            className="text-lg font-semibold tracking-[0.34em] text-[#1f1a18]"
+            className="text-lg font-semibold tracking-[0.34em] text-[#ffffff]"
           >
             WARD
           </Link>
@@ -60,13 +60,13 @@ export function MainNavbar() {
 
         <nav
           aria-label="Main navigation"
-          className="flex flex-1 items-center justify-center gap-3 text-center sm:gap-5 lg:gap-6"
+          className="flex flex-1 items-center justify-center gap-3 text-[#ffffff] text-center sm:gap-5 lg:gap-6"
         >
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="text-[10px] font-medium uppercase tracking-[0.14em] text-[#4d413d] transition hover:text-[#1d1a19] sm:text-xs lg:text-sm"
+              className="text-[10px] font-medium uppercase tracking-[0.14em] text-[#ffffff] transition hover:text-[#1d1a19] sm:text-xs lg:text-sm"
             >
               {item.label}
             </Link>
@@ -76,7 +76,7 @@ export function MainNavbar() {
         {isTopOfPage ? (
           <div className="w-10 shrink-0" aria-hidden="true" />
         ) : (
-          <div className="flex items-center gap-1 sm:gap-2">
+          <div className="flex items-center  gap-1 sm:gap-2">
             <IconButton label="Search">
               <svg
                 aria-hidden="true"

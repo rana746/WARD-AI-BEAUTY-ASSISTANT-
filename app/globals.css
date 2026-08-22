@@ -2,8 +2,8 @@
 
 :root {
   --background: #f9f5f2;
-  --foreground: #1d1a19;
-  --color-brand: #ffc8dd;
+  --foreground: #ffffff;
+  --color-brand: #FB6F92;
   --color-brand-foreground: #ffffff;
 }
 
@@ -22,7 +22,7 @@
   }
 
   .btn-brand:hover {
-    background: #f7b5cf;
+    background: #fcb7d2;
   }
 }
 

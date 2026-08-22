@@ -14,7 +14,7 @@ function IconButton({
     <button
       type="button"
       aria-label={label}
-      className="flex h-10 w-10 items-center justify-center rounded-full text-[#1f1a18] transition hover:text-[#000000] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1f1a18]/40"
+      className="flex h-10 w-10 items-center justify-center rounded-full text-[#ffffff] transition hover:text-[#000000] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1f1a18]/40"
     >
       {children}
     </button>
@@ -40,12 +40,12 @@ export function FirstNavbar() {
   }
 
   return (
-    <header className="border-b border-[#e8ded4] bg-[#f4efe9]">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
+    <header className="border-b border-[#ffffff] bg-[#FB6F92]">
+      <div className="mx-auto flex max-w-7xl items-center  justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
         <Link
           href="/"
           aria-label="WARD home"
-          className="text-base font-semibold tracking-[0.42em] text-[#1f1a18] sm:text-lg"
+          className="text-base font-semibold tracking-[0.42em] text-[#ffffff] sm:text-lg"
         >
           WARD
         </Link>
