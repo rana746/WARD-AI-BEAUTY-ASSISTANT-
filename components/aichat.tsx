@@ -10,8 +10,7 @@ export default function AIChat() {
   const [input, setInput] = useState("");
   const [isAtBottom, setIsAtBottom] = useState(true);
 
-  const { messages, sendMessage, status, stop } = useChat();
-
+  const { messages, sendMessage, status, stop, error, regenerate } = useChat();
   const isLoading = status === "submitted" || status === "streaming";
 
   const lastMessage = messages[messages.length - 1];
@@ -24,7 +23,7 @@ export default function AIChat() {
 
   // Show thinking indicator before the first text token.
   const showThinking = status === "submitted" && !hasAssistantText;
-
+  const showError = status === "error" && !!error;
   const messagesContainerRef = useRef<HTMLDivElement>(null);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -190,6 +189,27 @@ export default function AIChat() {
                 </div>
               </div>
             ))}
+            {showError && (
+              <div className="flex justify-start">
+                <div className="max-w-[85%] rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-red-900 sm:max-w-[80%]">
+                  <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-red-600">
+                    WARD AI
+                  </p>
+
+                  <p className="text-sm leading-6">
+                    Something went wrong while generating the response.
+                  </p>
+
+                  <button
+                    type="button"
+                    onClick={() => regenerate()}
+                    className="mt-3 rounded-lg bg-red-600 px-3 py-2 text-sm font-medium text-white transition hover:bg-red-700"
+                  >
+                    Try again
+                  </button>
+                </div>
+              </div>
+            )}
 
             {showThinking && (
               <div className="flex justify-start">

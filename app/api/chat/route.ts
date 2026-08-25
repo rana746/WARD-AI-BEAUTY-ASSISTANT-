@@ -1,6 +1,3 @@
-//Claude streaming//
-// OpenRouter streaming
-
 import { streamText, convertToModelMessages } from "ai";
 
 import { model, systemPrompt } from "@/lib/ai/config";
@@ -21,5 +18,10 @@ export async function POST(req: Request) {
     },
   });
 
-  return result.toUIMessageStreamResponse();
+  return result.toUIMessageStreamResponse({
+    onError: (error) => {
+      console.error("WARD AI stream error:", error);
+      return "Something went wrong while generating the response.";
+    },
+  });
 }
