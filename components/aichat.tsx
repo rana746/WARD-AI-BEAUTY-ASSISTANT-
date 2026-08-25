@@ -1,9 +1,10 @@
-//Chat component messages -> input send stop streaming state scroll//
+// Chat component messages -> input send stop streaming state scroll//
 
 "use client";
 
 import { useChat } from "@ai-sdk/react";
 import { useEffect, useRef, useState } from "react";
+import ToolMetaTags from "./tool-meta-tags";
 
 export default function AIChat() {
   const [input, setInput] = useState("");
@@ -138,6 +139,49 @@ export default function AIChat() {
                     {message.parts?.map((part, index) => {
                       if (part.type === "text") {
                         return <span key={index}>{part.text}</span>;
+                      }
+
+                      if (part.type === "tool-fetchMetaTags") {
+                        switch (part.state) {
+                          case "input-streaming":
+                            return (
+                              <ToolMetaTags
+                                key={index}
+                                state="input-streaming"
+                              />
+                            );
+
+                          case "input-available":
+                            return (
+                              <ToolMetaTags
+                                key={index}
+                                state="input-available"
+                                input={part.input}
+                              />
+                            );
+
+                          case "output-available":
+                            return (
+                              <ToolMetaTags
+                                key={index}
+                                state="output-available"
+                                input={part.input}
+                                output={part.output}
+                              />
+                            );
+
+                          case "output-error":
+                            return (
+                              <ToolMetaTags
+                                key={index}
+                                state="output-error"
+                                errorText={part.errorText}
+                              />
+                            );
+
+                          default:
+                            return null;
+                        }
                       }
 
                       return null;
