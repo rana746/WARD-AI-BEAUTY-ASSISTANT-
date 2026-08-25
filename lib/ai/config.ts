@@ -1,15 +1,11 @@
-// model + system prompt
-
 import { createOpenRouter } from "@openrouter/ai-sdk-provider";
 
 const openrouter = createOpenRouter({
   apiKey: process.env.OPENROUTER_API_KEY,
 });
 
-// Free OpenRouter model used for the WARD AI chat.
-export const model = openrouter(
-  "nvidia/nemotron-3-nano-30b-a3b:free"
-);
+// Free OpenRouter model router.
+export const model = openrouter("openrouter/free");
 
 export const systemPrompt = `
 You are WARD AI, a helpful beauty assistant for the WARD beauty brand.
