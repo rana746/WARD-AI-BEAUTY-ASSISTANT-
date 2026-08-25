@@ -241,6 +241,7 @@ export default function AIChat() {
 
         <form onSubmit={handleSubmit} className="mt-4 flex gap-2 sm:gap-3">
           <input
+            aria-label="Ask WARD AI"
             value={input}
             onChange={(event) => setInput(event.target.value)}
             placeholder="Ask WARD AI..."
