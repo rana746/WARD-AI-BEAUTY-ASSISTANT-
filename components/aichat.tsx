@@ -77,7 +77,7 @@ export default function AIChat() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col bg-[#FFF5F7] p-4 sm:p-6">
+    <div className="flex min-h-screen flex-col bg-[#FFF5F7] p-4 sm:p-6">
       <div className="mx-auto flex w-full max-w-3xl flex-1 flex-col">
         <div className="mb-6">
           <h1 className="text-3xl font-semibold tracking-tight text-[#351E25]">
@@ -268,6 +268,6 @@ export default function AIChat() {
           )}
         </form>
       </div>
-    </main>
+    </div>
   );
 }
