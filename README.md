@@ -176,3 +176,35 @@ lib/ai/tools/fetch-meta-tags.ts
 components/aichat.tsx
 components/tool-meta-tags.tsx
  (feat: add FE-07 tool results and structured output)
+
+ ///UPDATE////
+ ## FE-AA2 — Interactive 3D Experience
+
+### What I built
+
+Built an interactive 3D WARD Beauty Studio using Three.js, React Three Fiber, and Drei.
+
+The experience includes a heart-shaped WARD mirror and four interactive beauty products. Users can orbit and zoom around the scene, hover over products, and click a product to view its name, description, price, and selected state.
+
+The experience is available at:
+
+/3d
+
+### Performance
+
+Kept the 3D experience lightweight by using procedural Three.js geometries instead of loading large external 3D models or textures.
+
+I also reused simple geometries and materials, memoized the heart shape, and used lightweight interpolation for product selection animations instead of adding a heavy animation library.
+
+The production build was validated successfully with:
+
+bash
+npm run build
+
+What I would add with more time
+
+With more time, I would replace the placeholder product geometries with optimized GLTF/GLB product models, add richer materials and reflections, improve the lighting and environment, and connect the 3D products directly to the real WARD product catalog and cart flow.
+
+Capstone Integration
+
+This experience is part of the WARD AI Beauty Assistant capstone and extends the project with an interactive 3D product exploration experience.
