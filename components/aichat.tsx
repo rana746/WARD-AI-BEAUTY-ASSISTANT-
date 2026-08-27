@@ -77,7 +77,7 @@ export default function AIChat() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col bg-[#FFF5F7] p-4 sm:p-6">
+    <div className="flex min-h-screen flex-col bg-[#FFF5F7] p-4 sm:p-6">
       <div className="mx-auto flex w-full max-w-3xl flex-1 flex-col">
         <div className="mb-6">
           <h1 className="text-3xl font-semibold tracking-tight text-[#351E25]">
@@ -96,7 +96,7 @@ export default function AIChat() {
             {messages.length === 0 && (
               <div className="flex min-h-[300px] flex-col items-center justify-center px-6 text-center">
                 <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#FFE4EC]">
-                  <span className="text-2xl text-[#FB6F92]">✦</span>
+                  <span className="text-2xl text-[#DA236A]">✦</span>
                 </div>
 
                 <h2 className="text-lg font-semibold text-[#351E25]">
@@ -120,7 +120,7 @@ export default function AIChat() {
                 <div
                   className={`max-w-[85%] rounded-2xl px-4 py-3 sm:max-w-[80%] ${
                     message.role === "user"
-                      ? "bg-[#FB6F92] text-white"
+                      ? "bg-[#DA236A] text-white"
                       : "bg-[#FFE4EC] text-[#351E25]"
                   }`}
                 >
@@ -128,7 +128,7 @@ export default function AIChat() {
                     className={`mb-1 text-xs font-semibold uppercase tracking-wide ${
                       message.role === "user"
                         ? "text-white/75"
-                        : "text-[#FB6F92]"
+                        : "text-[#DA236A]"
                     }`}
                   >
                     {message.role === "user" ? "You" : "WARD AI"}
@@ -218,9 +218,9 @@ export default function AIChat() {
                     <span className="text-sm">WARD AI is thinking</span>
 
                     <span className="flex gap-1">
-                      <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-[#FB6F92]" />
-                      <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-[#FB6F92] [animation-delay:150ms]" />
-                      <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-[#FB6F92] [animation-delay:300ms]" />
+                      <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-[#DA236A]" />
+                      <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-[#DA236A] [animation-delay:150ms]" />
+                      <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-[#DA236A] [animation-delay:300ms]" />
                     </span>
                   </div>
                 </div>
@@ -246,7 +246,7 @@ export default function AIChat() {
             onChange={(event) => setInput(event.target.value)}
             placeholder="Ask WARD AI..."
             disabled={isLoading}
-            className="min-w-0 flex-1 rounded-xl border border-[#FFD1DE] bg-white px-4 py-3 text-[#351E25] outline-none placeholder:text-[#B69CA5] focus:border-[#FB6F92] focus:ring-2 focus:ring-[#FB6F92]/20"
+            className="min-w-0 flex-1 rounded-xl border border-[#FFD1DE] bg-white px-4 py-3 text-[#351E25] outline-none placeholder:text-[#B69CA5] focus:border-[#DA236A] focus:ring-2 focus:ring-[#DA236A]/20"
           />
 
           {isLoading ? (
@@ -261,13 +261,13 @@ export default function AIChat() {
             <button
               type="submit"
               disabled={!input.trim()}
-              className="shrink-0 rounded-xl bg-[#FB6F92] px-4 py-3 font-medium text-white transition hover:bg-[#D94F72] disabled:cursor-not-allowed disabled:opacity-50 sm:px-5"
+              className="shrink-0 rounded-xl bg-[#DA236A] px-4 py-3 font-medium text-white transition hover:bg-[#D94F72] disabled:cursor-not-allowed disabled:opacity-50 sm:px-5"
             >
               Send
             </button>
           )}
         </form>
       </div>
-    </main>
+    </div>
   );
 }

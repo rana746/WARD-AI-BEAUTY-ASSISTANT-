@@ -40,12 +40,12 @@ export function FirstNavbar() {
   }
 
   return (
-    <header className="border-b border-[#ffffff] bg-[#FB6F92]">
+    <header className="border-b border-[#ffffff] bg-[#DA236A]">
       <div className="mx-auto flex max-w-7xl items-center  justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
         <Link
           href="/"
           aria-label="WARD home"
-          className="text-base font-semibold tracking-[0.42em] text-[#ffffff] sm:text-lg"
+          className="text-base font-bold tracking-[0.42em] text-[#ffffff] sm:text-3xl"
         >
           WARD
         </Link>
