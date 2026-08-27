@@ -44,7 +44,7 @@ export function MainNavbar() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[#FB6F92] bg-[#FB6F92]/95 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-[#DA236A] bg-[#DA236A]/95 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:px-8">
         {isTopOfPage ? (
           <div className="w-10 shrink-0" aria-hidden="true" />
@@ -52,7 +52,7 @@ export function MainNavbar() {
           <Link
             href="/"
             aria-label="WARD home"
-            className="text-lg font-semibold tracking-[0.34em] text-[#ffffff]"
+            className="text-3xl font-bold tracking-[0.34em] text-[#ffffff]"
           >
             WARD
           </Link>

@@ -20,7 +20,7 @@ function SocialIcon({
 
 export function Footer() {
   return (
-    <footer className="border-t border-[#FB6F92] bg-[#FB6F92] text-[#ffffff]">
+    <footer className="border-t border-[#DA236A] bg-[#DA236A] text-[#ffffff]">
       <div className="mx-auto grid max-w-7xl gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[1.2fr_0.8fr_0.9fr_1.2fr] lg:px-8">
         <div className="space-y-5">
           <p className="text-2xl font-semibold tracking-[0.44em] text-[#ffffff]">

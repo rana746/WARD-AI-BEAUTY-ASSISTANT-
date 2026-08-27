@@ -96,7 +96,7 @@ export default function AIChat() {
             {messages.length === 0 && (
               <div className="flex min-h-[300px] flex-col items-center justify-center px-6 text-center">
                 <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#FFE4EC]">
-                  <span className="text-2xl text-[#FB6F92]">✦</span>
+                  <span className="text-2xl text-[#DA236A]">✦</span>
                 </div>
 
                 <h2 className="text-lg font-semibold text-[#351E25]">
