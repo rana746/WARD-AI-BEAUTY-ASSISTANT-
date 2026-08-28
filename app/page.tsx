@@ -1,10 +1,10 @@
 import AIChat from "@/components/aichat";
-import ShaderHero from "@/components/ShaderHero";
+import ShaderHeroClient from "@/components/ShaderHeroClient";
 
 export default function Home() {
   return (
     <main>
-      <ShaderHero />
+      <ShaderHeroClient />
       <AIChat />
     </main>
   );
