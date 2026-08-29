@@ -1,8 +1,9 @@
 # WARD — AI Beauty Assistant & Interactive 3D Beauty Studio
 
-WARD is an interactive beauty experience built with Next.js and React. The project combines an AI-powered beauty assistant with an interactive 3D beauty studio and a visually polished WARD-inspired interface.
+## Project Brief
 
-The project was developed as part of the Frontend AI Engineering track and evolved through multiple assignments covering AI interaction, tool usage, error handling, testing, motion, accessibility, 3D graphics, shader effects, and production deployment.
+WARD is an AI-enhanced beauty experience designed for people who want practical, conversational guidance across skincare, makeup, and personal care without navigating complex beauty information on their own. It combines a streaming AI beauty assistant with an interactive 3D beauty studio, allowing users to explore beauty content through both conversation and visual interaction. I chose this idea to turn a familiar beauty interface into a meaningful AI-powered experience while applying the frontend engineering, accessibility, interaction, 3D, and production skills developed throughout the Frontend AI Engineering track.
+
 
 ## Production
 
