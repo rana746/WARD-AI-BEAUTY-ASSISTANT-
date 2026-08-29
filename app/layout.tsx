@@ -16,8 +16,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "WARD Beauty",
-  description: "Luxury beauty essentials and modern skincare rituals.",
+  title: {
+    default: "WARD Beauty — AI Beauty Assistant",
+    template: "%s | WARD Beauty",
+  },
+  description:
+    "Discover beauty, skincare, and makeup with WARD — an AI-powered beauty assistant and interactive beauty experience.",
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

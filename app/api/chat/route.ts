@@ -8,7 +8,7 @@ import { fetchMetaTags } from "@/lib/ai/tools/fetch-meta-tags";
 export const maxDuration = 30;
 
 // Production safety limits
-const MAX_MESSAGES = 20;
+const MAX_MESSAGES = 10;
 const MAX_MESSAGE_LENGTH = 2000;
 
 export async function POST(req: Request) {
