@@ -168,11 +168,56 @@ Instead of exposing internal errors directly to users, the interface provides a 
 
 Testing and continuous integration were added to improve reliability during development.
 
-The project includes automated testing work and CI configuration.
+The project uses **Vitest** with **V8 coverage** for automated component testing.
 
-A Node.js version mismatch encountered during the testing setup was also corrected so the testing environment could run consistently.
+## Test Results
 
-The testing work helped verify that important project behavior remained stable while new features were added.
+The current test suite includes:
+
+* **2 test files passed**
+* **17 tests passed**
+* **0 failed tests**
+
+Coverage results:
+
+| Metric     |   Coverage |
+| ---------- | ---------: |
+| Statements |    **70%** |
+| Branches   | **81.31%** |
+| Functions  | **84.61%** |
+| Lines      | **74.24%** |
+
+Component-level coverage includes:
+
+| Component            | Statements |
+| -------------------- | ---------: |
+| `aichat.tsx`         | **59.18%** |
+| `tool-meta-tags.tsx` | **95.23%** |
+
+The overall statement coverage of **70%** exceeds the Capstone requirement of **50% component coverage**.
+
+## Covered Behavior
+
+The tests verify important application behavior including:
+
+* WARD AI welcome state
+* User input handling
+* Send button state
+* Message submission
+* Input clearing after submission
+* AI chat interaction behavior
+* Webpage metadata tool output
+
+The test suite was run with:
+
+```bash
+npm test -- --coverage
+```
+
+The latest run completed successfully with all **17 tests passing**.
+
+The coverage report was generated using Vitest's V8 coverage provider.
+
 
 ---
 
