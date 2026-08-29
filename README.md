@@ -837,3 +837,11 @@ The project combines:
 * Basic AI API protection
 
 Built as part of the Frontend AI Engineering track.
+
+# Reflection
+
+Building WARD as a production AI application was more challenging than building the individual features themselves. The hardest part was making the different pieces work reliably together: the AI assistant, streaming responses, tool usage, error states, accessibility, 3D effects, shader animation, testing, and production deployment. In particular, debugging the production AI flow taught me that a successful HTTP response does not always mean that the complete user experience is working. The API initially returned `200 OK` while the chat UI still showed a retry state, which required checking production logs and tracing the issue to the OpenRouter API key configuration.
+
+If I were building the project again, I would plan the production requirements earlier instead of treating deployment, accessibility, testing, and error handling as later stages. I would also establish the testing structure earlier so that new features could be verified immediately as the application grew. For a project with AI and interactive 3D features, I would additionally define performance budgets from the beginning and monitor them throughout development rather than optimizing mainly near the end.
+
+One thing that surprised me was how much of production frontend engineering happens outside the visible UI. The final application may look like a frontend project, but making it production-ready required thinking about API security, input limits, streaming failures, accessibility, SEO, testing, deployment configuration, environment variables, and recovery paths. This project showed me that shipping a feature is not only about making it work in the happy path—it is about making the whole experience reliable when things go wrong.
