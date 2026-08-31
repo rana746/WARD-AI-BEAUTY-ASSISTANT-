@@ -79,7 +79,7 @@ export default function ShaderHero() {
     <section
       className={`relative min-h-screen overflow-hidden ${
         prefersReducedMotion
-          ? "bg-gradient-to-b from-[#EFA0B8] via-[#FFC8DD] to-white"
+          ? "bg-gradient-to-b from-[#DA236A] via-[#d90370] to-white"
           : ""
       }`}
     >
@@ -96,13 +96,13 @@ export default function ShaderHero() {
         </Canvas>
       )}
 
-      <div className="relative z-10 flex min-h-screen items-center justify-center px-6 text-center">
+      <div className="relative z-10 flex min-h-screen items-center justify-center px-6 text-center ">
         <div>
-          <p className="mb-4 text-sm uppercase tracking-[0.3em]">WARD</p>
+          <h1 className="mb-4 text-sm uppercase tracking-[0.3em]">WARD</h1>
 
-          <h1 className="text-5xl font-semibold md:text-7xl">
+          <h3 className="text-5xl font-semibold md:text-7xl">
             Beauty, reimagined.
-          </h1>
+          </h3>
 
           <p className="mx-auto mt-6 max-w-xl text-base md:text-lg">
             A beauty experience designed around you.
