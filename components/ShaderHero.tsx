@@ -5,16 +5,13 @@ import * as THREE from "three";
 import { useEffect, useRef, useState } from "react";
 
 import { fragmentShader, vertexShader } from "@/lib/shaders/wardHero";
-
 import { useReducedMotion } from "@/app/hooks/useReducedMotion";
 
 function ShaderPlane() {
   const materialRef = useRef<THREE.ShaderMaterial>(null);
-
   const { size } = useThree();
 
   const [isVisible, setIsVisible] = useState(true);
-
   const prefersReducedMotion = useReducedMotion();
 
   useEffect(() => {
@@ -74,19 +71,32 @@ function ShaderPlane() {
 
 export default function ShaderHero() {
   const prefersReducedMotion = useReducedMotion();
+  const [showShader, setShowShader] = useState(false);
+
+  useEffect(() => {
+    if (prefersReducedMotion) {
+      return;
+    }
+
+    const timer = window.setTimeout(() => {
+      setShowShader(true);
+    }, 600);
+
+    return () => window.clearTimeout(timer);
+  }, [prefersReducedMotion]);
 
   return (
     <section
       className={`relative min-h-screen overflow-hidden ${
         prefersReducedMotion
           ? "bg-gradient-to-b from-[#DA236A] via-[#d90370] to-white"
-          : ""
+          : "bg-[#DA236A]"
       }`}
     >
-      {!prefersReducedMotion && (
+      {showShader && !prefersReducedMotion && (
         <Canvas
           className="!absolute !inset-0 !h-full !w-full"
-          dpr={[1, 2]}
+          dpr={[1, 1.5]}
           camera={{
             position: [0, 0, 1],
             fov: 75,
@@ -96,13 +106,13 @@ export default function ShaderHero() {
         </Canvas>
       )}
 
-      <div className="relative z-10 flex min-h-screen items-center justify-center px-6 text-center ">
+      <div className="relative z-10 flex min-h-screen items-center justify-center px-6 text-center">
         <div>
-          <h1 className="mb-4 text-sm uppercase tracking-[0.3em]">WARD</h1>
+          <p className="mb-4 text-sm uppercase tracking-[0.3em]">WARD</p>
 
-          <h3 className="text-5xl font-semibold md:text-7xl">
+          <h1 className="text-5xl font-semibold md:text-7xl">
             Beauty, reimagined.
-          </h3>
+          </h1>
 
           <p className="mx-auto mt-6 max-w-xl text-base md:text-lg">
             A beauty experience designed around you.

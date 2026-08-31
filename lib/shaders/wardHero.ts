@@ -50,25 +50,22 @@ export const fragmentShader = `
 
     uv.x += mouseWave * mouseInfluence * 0.08;
 
-    // WARD primary brand color: #DA236A
     vec3 deepPink = vec3(
-      0.55,
-      0.02,
-      0.22
+      0.937,
+      0.627,
+      0.722
     );
 
-    // Lighter shade derived from #DA236A
     vec3 wardPink = vec3(
-      0.855,
-      0.137,
-      0.416
+      1.0,
+      0.784,
+      0.867
     );
 
-    // Soft shade derived from the same pink family
     vec3 softPink = vec3(
-      0.95,
-      0.32,
-      0.56
+      1.0,
+      0.910,
+      0.941
     );
 
     vec3 white = vec3(
@@ -89,7 +86,7 @@ export const fragmentShader = `
       topGradient
     );
 
-    float softGradient = smoothstep(
+    float whiteGradient = smoothstep(
       0.48,
       1.0,
       vUv.y
@@ -98,15 +95,13 @@ export const fragmentShader = `
     color = mix(
       color,
       softPink,
-      softGradient * 0.35
+      whiteGradient * 0.75
     );
 
-    // Keep only a subtle white highlight
-    // so the background does not become too light.
     color = mix(
       color,
       white,
-      softGradient * 0.08
+      whiteGradient * 0.35
     );
 
     float highlight = sin(
@@ -119,7 +114,7 @@ export const fragmentShader = `
     color = mix(
       color,
       white,
-      highlight * 0.05
+      highlight * 0.07
     );
 
     color += mouseInfluence * vec3(
